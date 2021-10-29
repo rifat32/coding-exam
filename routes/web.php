@@ -20,19 +20,23 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
 // password is abcdefgh
 // this route should be commented out
-// @@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@
 Route::get("/change-password", "TestController@changePassword");
-// @@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@
+
+
+
+
 Route::middleware('auth')->group(function () {
     Route::resource('product-variant', 'VariantController');
     Route::get("products/search", "ProductController@search")->name("search");
     Route::post("/store-image", "ProductController@storeImage");
     Route::resource('product', 'ProductController');
-
-
-
     Route::resource('blog', 'BlogController');
     Route::resource('blog-category', 'BlogCategoryController');
 });

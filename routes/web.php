@@ -21,13 +21,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// password is abcdefgh
+// password is abcdefgh
+// password is abcdefgh
+// password is abcdefgh
+// password is abcdefgh
+// password is abcdefgh
 // password is abcdefgh
 // this route should be commented out
-// @@@@@@@@@@@@@@
+// this route should be commented out
+// this route should be commented out
+
 Route::get("/change-password", "TestController@changePassword");
-// @@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
 
